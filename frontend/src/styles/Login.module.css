@@ -1,0 +1,10 @@
+/* Login.module.css */
+@import "./Signup.module.css"; /* Reuse the same styles */
+
+.card {
+  width: 350px;
+}
+
+h2 {
+  color: #333;
+}

@@ -1,0 +1,111 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  color: #2d3748;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inputField {
+  width: 88%;
+  padding: 0.8rem 1.2rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f1f5f9; /* Consistent background color */
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: #667eea;
+  background-color: #e5e7eb;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.passwordHint {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-top: -10px;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -8px;
+}
+
+button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.link {
+  display: block;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #4a5568;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #667eea;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .card {
+      padding: 1.5rem;
+  }
+
+  h2 {
+      font-size: 1.75rem;
+  }
+}
+.inputField {
+  color: black; /* Ensure text inside input is black */
+  background-color: white; /* Optional: Ensures input background is white */
+}
+

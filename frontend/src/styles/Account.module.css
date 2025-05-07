@@ -1,0 +1,138 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1A1333, #090B20); /* Same gradient as home */
+    color: #FFFFFF;
+    position: relative;
+}
+
+.accountBox {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    width: 50%;
+    max-width: 600px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.heading {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #7F7CFF, #47CFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.accountInfo {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.editContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.editBtn {
+    background: linear-gradient(90deg, #7F7CFF, #47CFFF);
+    color: white;
+    margin-top: 10px;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 12px; /* Adjust spacing between buttons */
+    justify-content: center; /* Center the buttons horizontally */
+    margin-top: 20px; /* Add some space above */
+  }
+  
+  .saveButton {
+    background: linear-gradient(135deg, #786FFF, #A085FF);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .saveButton:hover {
+    background: linear-gradient(135deg, #6B5FFF, #8E7AFF);
+  }
+  
+  .cancelButton {
+    background: #55546E;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .cancelButton:hover {
+    opacity: 0.8;
+  }
+  
+  
+button:hover {
+    transform: scale(1.05);
+}
+
+.loading {
+    text-align: center;
+    color: #bbb;
+}
+
+.noHistory {
+    text-align: center;
+    color: #bbb;
+    padding: 10px;
+}
+
+.animationBox {
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    width: 150px;
+    height: 150px;
+    background: url('/animation.svg'); /* Placeholder for actual animation */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

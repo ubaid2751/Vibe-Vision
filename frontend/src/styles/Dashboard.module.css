@@ -1,0 +1,300 @@
+.container {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #0f0f1f;
+}
+
+.gradient {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #667eea, #764ba2, #6B46C1, #667eea);
+  animation: rotate 20s linear infinite;
+  opacity: 0.1;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(102, 126, 234, 0.4);
+  border-radius: 50%;
+}
+
+/* Header styles */
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.vibe {
+  background: linear-gradient(45deg, #667eea, #8a6bec);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.vision {
+  background: linear-gradient(45deg, #76e3ec, #667eea);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logoutButton {
+  position: relative;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, #667eea, #8a6bec);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.buttonGlow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+  pointer-events: none;
+}
+
+/* Camera Section */
+.cameraSection {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.cameraContainer {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.1);
+}
+
+.cameraFeed {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  transform: scaleX(-1);
+}
+
+.cameraButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #667eea, #8a6bec);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cameraButton:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* Emotion Display */
+.emotionOverlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+}
+
+.emotionBadge {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Analysis Panel */
+.analysisPanel {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.analysisPanel h3 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.metrics {
+  display: grid;
+  gap: 1rem;
+}
+
+.metricItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+}
+
+.metricLabel {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.metricValue {
+  color: #76e3ec;
+  font-weight: 600;
+}
+
+.expressionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.expressionItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.expressionLabel {
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: capitalize;
+}
+
+.expressionValue {
+  color: #76e3ec;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+  
+  .logo {
+    font-size: 1.4rem;
+  }
+  
+  .logoutButton {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .cameraContainer {
+    padding: 10px;
+  }
+  
+  .emotionBadge {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .analysisPanel {
+    padding: 1rem;
+  }
+  
+
+}
+.buttonContainer {
+  display: flex;
+  gap: 15px; /* Space between Account & Logout buttons */
+}
+
+.accountButton {
+  position: relative;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, #667eea, #8a6bec);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.accountButton:hover {
+  background: linear-gradient(135deg, #5ab9ea, #667eea);
+  transform: scale(1.05);
+}
+.uploadButton {
+  display: block;
+  margin: 20px auto; /* Centers the button */
+  padding: 10px 30px; /* Adjusts padding for better shape */
+  width: fit-content; /* Prevents full width */
+  background: linear-gradient(135deg, #667eea, #8a6bec);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.uploadButton:hover {
+  background: linear-gradient(135deg, #5ab9ea, #667eea);
+  transform: scale(1.05);
+}
+
+
+.hiddenInput {
+  display: none;
+}
