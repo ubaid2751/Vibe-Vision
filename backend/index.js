@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 app.use(express.json());
@@ -12,13 +13,19 @@ app.use(cors());
 
 // Database Connection
 async function main() {
-  await mongoose.connect("mongodb+srv://sugam7212:Sugam_88@cluster0.uabtp.mongodb.net/SE_project");
-  console.log("Mongo connected");
+  try {
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log("Mongo connected");
 
-  app.listen(3000, () => {
-    console.log("Server running on port 3000");
-  });
+    app.listen(3000, () => {
+      console.log("Server running on port 3000");
+    });
+  } catch (error) {
+    console.error("MongoDB connection error:", error);
+    process.exit(1);
+  }
 }
+
 main();
 
 // API Routes
